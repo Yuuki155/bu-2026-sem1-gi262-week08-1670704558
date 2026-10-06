@@ -6,7 +6,6 @@ namespace Assignment
     public class StudentSolution
     {
         #region Lecture
-
         public int LCT01_RecursiveFactorial(int n)
         {
             return Factorial(n);
@@ -15,10 +14,12 @@ namespace Assignment
         private int Factorial(int n)
         {
             // base case
-
+            if (n <= 1) return 1;
             // recursive case
-
-            return -1;
+            // 3 Factorial(3-1)
+            // 3 Factorial(2-1)
+            // 3 Factorial(1-1)
+            return n * Factorial(n - 1);
         }
 
         public int LCT02_RecursiveFibonacci(int n)
@@ -29,10 +30,12 @@ namespace Assignment
         private int Fibonacci(int n)
         {
             // base case
-
+            if (n <= 1) return n;
             // recursive case
-
-            return -1;
+            //5 = Fibonacci(3) + Fibonacci(2)
+            //3 = Fibonacci(2) + Fibonacci(1)
+            //1 = Fibonacci(1) + Fibonacci(0)
+            return Fibonacci(n - 1) + Fibonacci(n - 2);
         }
 
         public int LCT03_RecursiveSumOfOneToN(int n)
@@ -43,24 +46,12 @@ namespace Assignment
         private int SumOfOneToN(int n)
         {
             // base case
-
+            if (n <= 0) return 0;
             // recursive case
-
-            return -1;
-        }
-
-        public int LCT04_RecursiveSumOfNumbers(int[] numbers)
-        {
-            return SumOfNumbers(numbers, 0);
-        }
-
-        private int SumOfNumbers(int[] numbers, int index)
-        {
-            // base case
-
-            // recursive case
-
-            return -1;
+            //3 + SumOfOneToN(2)
+            //2 + SumOfOneToN(1)
+            //1 + SumOfOneToN(0)
+            return n + SumOfOneToN(n - 1);
         }
 
         #endregion
