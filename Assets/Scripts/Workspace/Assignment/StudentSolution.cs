@@ -53,7 +53,19 @@ namespace Assignment
             //1 + SumOfOneToN(0)
             return n + SumOfOneToN(n - 1);
         }
+        public int LCT04_RecursiveSumOfNumbers(int[] numbers)
+        {
+            return SumOfNumbers(numbers, 0);
+        }
 
+        private int SumOfNumbers(int[] numbers, int index)
+        {
+            // base case
+
+            // recursive case
+
+            return -1;
+        }
         #endregion
 
         #region Assignment
