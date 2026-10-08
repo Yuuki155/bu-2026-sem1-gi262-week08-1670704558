@@ -12,7 +12,7 @@ using UnityEngine;
         {
             // 1. set the text of the node and initialize the nexts dictionary
             this.text = text;
-        nexts = new Dictionary<string, DialogueNode>();
+            nexts = new Dictionary<string, DialogueNode>();
         }
 
         public void AddNext(DialogueNode next, string choiceText)

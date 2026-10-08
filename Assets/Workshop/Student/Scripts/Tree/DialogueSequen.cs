@@ -15,7 +15,7 @@ public class DialogueSequen : MonoBehaviour
         LoadConversations();
 
         // 2. set the current node to the root of the tree and print its contents
-        dialogueUI = GetComponent<DialogueUI>();
+        dialogueUI = GetComponent<NPC>().dialogueUI;
     }
 
     private void LoadConversations()
@@ -71,6 +71,7 @@ public class DialogueSequen : MonoBehaviour
         // [6] add askForQuest's next node: goodbye, with text: "Maybe later."
         askForQuest.AddNext(goodbye, "Maybe later.");
         // 5. Set up the root of the dialogue tree
+        tree = new DialogueTree(greeting);
     }
 
     // **เมธอดใหม่สำหรับรับการเลือกจากปุ่ม UI**
